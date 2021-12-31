@@ -230,7 +230,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 2rem 0;
 }
 

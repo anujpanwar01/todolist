@@ -178,7 +178,7 @@ main {
 }
 .display__form {
   @include flex;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 2rem 0;
   @media screen and (max-width: 40.625em) {
     margin: 1.5rem 0;
