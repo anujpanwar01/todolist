@@ -105,6 +105,7 @@ nav {
   border: 1px solid transparent;
   outline: none;
   border: 2px solid transparent;
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 22.5em) {
@@ -283,6 +284,7 @@ main {
   background-color: #5c5858be;
   border-radius: 10px;
   border: 1px solid #5c5858be;
+  margin: 0.5rem;
 }
 
 @media screen and (max-width: 100em) {
@@ -331,6 +333,7 @@ main {
   border-radius: 5px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin: 0.5rem;
 }
 
 @media screen and (max-width: 31.25em) {
