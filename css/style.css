@@ -230,8 +230,13 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1rem;
   margin: 2rem 0;
+}
+
+@supports (gap: 1rem) {
+  .display__form {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 40.625em) {
