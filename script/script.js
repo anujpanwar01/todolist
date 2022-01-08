@@ -31,6 +31,9 @@ btn.addEventListener("click", function (e) {
   const output = document.createElement("form");
   output.className = "display__form";
 
+  const checkbox = document.createElement("input");
+  checkbox.setAttribute("type", "checkbox");
+
   const outputDisplay = document.createElement("input");
   outputDisplay.setAttribute("type", "text");
   outputDisplay.setAttribute("disabled", "false");
@@ -96,6 +99,7 @@ viewBox="0 0 16 16"
   bigContainer1.appendChild(bigContainer2);
   bigContainer2.appendChild(container);
   container.appendChild(output);
+  output.appendChild(checkbox);
   output.appendChild(outputDisplay);
   output.appendChild(btnContainer);
   output.appendChild(btnContainer2);
@@ -124,30 +128,24 @@ viewBox="0 0 16 16"
   //event on delete btn
   btnContainer1.addEventListener("click", function () {
     bigContainer2.remove(bigContainer2);
-    if (bigContainer1.children.length === 0) {
-      main.style.opacity = 0;
+    opacity();
+  });
+
+  //checkbox button event
+  checkbox.addEventListener("click", function () {
+    bigContainer2.style.animation = "fadeOut 2s ";
+    function dis() {
+      bigContainer2.remove(bigContainer2);
     }
+
+    setTimeout(dis, 1000);
+
+    setTimeout(opacity, 1000);
   });
 });
 
-// delBtn.addEventListener("click", function () {});
-
-// let a = document;
-// a = document.all;
-// console.log(a);
-
-// if (outputDisplay.value === "") {
-//   // alert("Please do not leave an empty task!");
-//   outputDisplay.setAttribute("required", "false");
-//   outputDisplay.removeAttribute("disabled");
-//   outputDisplay.focus();
-//   btnContainer2.style.display = "block";
-
-// container.remove(container);
-// if (bigContainer1.children.length === 1) {
-//   container.remove(container);
-//   main.style.opacity = 0;
-
-//   return;
-//   // if()
-// }
+function opacity() {
+  if (bigContainer1.children.length === 0) {
+    main.style.opacity = 0;
+  }
+}
